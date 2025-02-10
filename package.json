@@ -1,0 +1,14 @@
+{
+  "name": "pokemon-generator-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rithvik Pothana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
