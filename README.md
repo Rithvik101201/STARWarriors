@@ -1,4 +1,4 @@
-#Pokemon Card Generator
+# Pokemon Card Generator
 
 ## Technologies Used
 - **Node.js**: Server-side runtime environment.
