@@ -11,6 +11,7 @@ app.get("/", function (request, response) {
     response.sendFile(path.join(__dirname, '../public/index.html')); 
 }); 
 
-app.listen(3000, function(){
-    console.log("Server Initiated");
+const port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log(`Server is running on port ${port}`);
 });
