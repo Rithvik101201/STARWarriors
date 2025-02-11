@@ -9,4 +9,4 @@
 - **JavaScript**: Front-end logic.
 
 ## Live Demo
-<a href="https://your-app-name.onrender.com](https://pokecard-generator.onrender.com/)" target="_blank">https://pokecard-generator.onrender.com/</a>
+<a href="https://your-app-name.onrender.com](https://pokecard-generator.onrender.com/)" target="_blank">View</a>
