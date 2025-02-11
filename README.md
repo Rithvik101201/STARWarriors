@@ -3,7 +3,7 @@
 ## Technologies Used
 - **Node.js** 
 - **Express.js** 
-- **PokeAPI** - API used to fetch Pokémon data.
+- **PokeAPI** - API used to fetch Pokemon data.
 - **HTML**
 - **CSS**
 - **JavaScript**
