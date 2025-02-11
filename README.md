@@ -1,12 +1,12 @@
 # Pokemon Card Generator
 
 ## Technologies Used
-- **Node.js**: Server-side runtime environment.
-- **Express.js**: Web framework for building the API.
-- **PokeAPI**: API used to fetch Pokémon data.
-- **HTML**: Structure of the front-end.
-- **CSS**: Styling for the front-end.
-- **JavaScript**: Front-end logic.
+- **Node.js** 
+- **Express.js** 
+- **PokeAPI** - API used to fetch Pokémon data.
+- **HTML**
+- **CSS**
+- **JavaScript**
 
 ## Live Demo
 <a href="https://pokecard-generator.onrender.com/" target="_blank">View</a>
