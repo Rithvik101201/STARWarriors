@@ -10,7 +10,7 @@ const folderPath = path.join(__dirname,'public')
 app.use(express.static(folderPath))
 
 app.get('/', (req,res)=>{
-    res.sendFile(path.join('folderPath/index.html'))
+    res.sendFile(path.join(folderPath/'index.html'))
 })
 
 app.listen(PORT, (err)=>{
