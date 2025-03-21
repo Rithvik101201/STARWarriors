@@ -1,3 +1,5 @@
+## StarWars Card Generator
+
 ## Technologies Used
 - **HTML**
 - **CSS**
@@ -5,3 +7,6 @@
 - **Node.js** 
 - **Express.js**
 - **SWAPI API** -- API used to fetch data
+
+## Live Demo
+<a href="" target="_blank">View</a>
