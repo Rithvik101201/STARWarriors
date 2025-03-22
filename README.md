@@ -9,4 +9,4 @@
 - **SWAPI API** -- API used to fetch data
 
 ## Live Demo
-<a href="" target="_blank">View</a>
+<a href="https://starwarriors.onrender.com" target="_blank">View</a>
