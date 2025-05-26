@@ -34,39 +34,11 @@ async function getCharactersDetails() {
   const characters = [];
 
   try {
-    const url1 = "https://swapi.dev/api/people/?page=1";
-    const res1 = await fetch(url1);
-    const data1 = await res1.json();
+    const url = "https://swapi.info/api/people";
+    const res = await fetch(url);
+    const data = await res.json();
 
-    for (let ch of data1["results"]) {
-      const name = ch.name;
-      const birthYear = ch.birth_year;
-      const skinColor = ch.skin_color;
-      const height = ch.height;
-      const image = `img/${characterPhotos[name]}`;
-      const homeWorldUrl = ch.homeworld;
-
-      const planetName = await getPlanetName(homeWorldUrl);
-
-      characters.push({
-        name,
-        birthYear,
-        skinColor,
-        height,
-        planetName,
-        image,
-      });
-    }
-  } catch (error) {
-    console.log("Error while fetching the data", error);
-  }
-
-  try {
-    const url2 = "https://swapi.dev/api/people/?page=2";
-    const res2 = await fetch(url2);
-    const data2 = await res2.json();
-
-    for (let ch of data2["results"]) {
+    for (let ch of data["results"]) {
       const name = ch.name;
       const birthYear = ch.birth_year;
       const skinColor = ch.skin_color;
