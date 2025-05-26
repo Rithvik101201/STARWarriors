@@ -38,7 +38,7 @@ async function getCharactersDetails() {
     const res = await fetch(url);
     const data = await res.json();
 
-    for (let ch of data["results"]) {
+    for (let ch of data) {
       const name = ch.name;
       const birthYear = ch.birth_year;
       const skinColor = ch.skin_color;
