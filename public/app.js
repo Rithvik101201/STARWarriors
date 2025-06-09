@@ -30,64 +30,84 @@ async function getPlanetName(url) {
   return planetData["name"];
 }
 
- try {
-    const url1 = "https://www.swapi.tech/api/people?page=1&limit=10";
-    const res1 = await fetch(url1);
-    const data1 = await res1.json();
+async function getCharactersDetails() {
 
-    for (let ch of data1["results"]) {
-      const name = ch.name;
-      const birthYear = ch.birth_year;
-      const skinColor = ch.skin_color;
-      const height = ch.height;
-      const image = `img/${characterPhotos[name]}`;
-      const homeWorldUrl = ch.homeworld;
+	const characters = [];
 
-      const planetName = await getPlanetName(homeWorldUrl);
+	try {
 
-      characters.push({
-        name,
-        birthYear,
-        skinColor,
-        height,
-        planetName,
-        image,
-      });
-    }
-  } catch (error) {
-    console.log("Error while fetching the data", error);
-  }
+		const url = "https://www.swapi.tech/api/people?page=1&limit=10";
+		const res = await fetch(url);
+		const data = await res.json();
+		for (let ch of data['results']) {
+			const myUrl = ch['url']
+			const myRes = await fetch(myUrl)
+			const myData = await myRes.json()
+			const myProperties = myData['result']['properties'];
 
-  try {
-    const url2 = "https://www.swapi.tech/api/people?page=2&limit=10";
-    const res2 = await fetch(url2);
-    const data2 = await res2.json();
 
-    for (let ch of data2["results"]) {
-      const name = ch.name;
-      const birthYear = ch.birth_year;
-      const skinColor = ch.skin_color;
-      const height = ch.height;
-      const image = `img/${characterPhotos[name]}`;
-      const homeWorldUrl = ch.homeworld;
+			const name = myProperties.name;
+			const birthYear = myProperties.birth_year;
+			const skinColor = myProperties.skin_color;
+			const height = myProperties.height;
+			const image = `img/${characterPhotos[name]}`;
+			const homeWorldUrl = myProperties.homeworld;
 
-      const planetName = await getPlanetName(homeWorldUrl);
+			const planetName = await getPlanetName(homeWorldUrl);
 
-      characters.push({
-        name,
-        birthYear,
-        skinColor,
-        height,
-        planetName,
-        image,
-      });
-    }
-  } catch (error) {
-    console.log("Error while fetching the data", error);
-  }
+			characters.push({
+				name,
+				birthYear,
+				skinColor,
+				height,
+				planetName,
+				image
+			});
+		}
 
-  return characters;
+
+	} catch (error) {
+		console.log("Error while fetching the data", error);
+	}
+
+	try {
+
+		const url = "https://www.swapi.tech/api/people?page=2&limit=10";
+		const res = await fetch(url);
+		const data = await res.json();
+		for (let ch of data['results']) {
+			const myUrl = ch['url']
+			const myRes = await fetch(myUrl)
+			const myData = await myRes.json()
+			const myProperties = myData['result']['properties'];
+
+			const name = myProperties.name;
+			const birthYear = myProperties.birth_year;
+			const skinColor = myProperties.skin_color;
+			const height = myProperties.height;
+			const image = `img/${characterPhotos[name]}`;
+			const homeWorldUrl = myProperties.homeworld;
+
+			const planetName = await getPlanetName(homeWorldUrl);
+
+			characters.push({
+				name,
+				birthYear,
+				skinColor,
+				height,
+				planetName,
+				image
+			});
+		}
+
+
+	} catch (error) {
+		console.log("Error while fetching the data", error);
+	}
+
+	return characters;
 }
+
 
 let generateCard = (character) => {
   card.innerHTML = `
