@@ -6,7 +6,9 @@
 - **JavaScript**
 - **Node.js** 
 - **Express.js**
-- **SWAPI API** -- API used to fetch data
+
+## API Used
+- **SWAPI API**
 
 ## Live Demo
 <a href="https://starwarriors.onrender.com" target="_blank">View</a>
